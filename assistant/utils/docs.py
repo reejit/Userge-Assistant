@@ -35,22 +35,11 @@ examples = "https://theuserge.github.io/examples.html"
 faqs = "https://theuserge.github.io/faq.html"
 
 HELP = (
-    "🤖 **UserGe Assistant**\n\n"
+    "🤖 **Askplugins Assistant**\n\n"
 
 
-    "You can use this bot in inline mode to search for UserGe Docs and FAQs"
-    f" and All Methods available in [UserGe Docs]({userge_wiki}).\n\n"
-
-    "**__Search__**\n"
-    "`@UsergeBot <query>`\n\n"
-
-    "**__List of Queries__**\n"
-    "`Decorators`\n"
-    "`Deployment`\n"
-    "`Vars`\n"
-    "`Modes`\n"
-    "`Example`\n"
-    "`Faqs`"
+    "Hey there this bot works only in [askplugins](t.me/askplugins)
+     So please proceed there to see how this bot works....."
 )
 
 USERGE = [
