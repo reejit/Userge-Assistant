@@ -21,4 +21,4 @@ async def _reply(_, message: Message):
     if not text:
         return
     await message.delete()
-    await replid.reply(f"{text.strip()}\n**cc** : {message.from_user.mention}")
+    await replid.reply(f"{text.strip()}\n**User** : {message.from_user.mention}")
