@@ -19,4 +19,4 @@ async def _start_(_, msg: Message):
     await msg.reply(
         HELP,
         disable_web_page_preview=True,
-        parse_mode="markdown"
+        parse_mode="markdown")
