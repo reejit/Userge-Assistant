@@ -44,10 +44,10 @@ async def _sendit(chat_id):
     if not LOGO_DATA:
         await _refresh_data()
     caption = f"""
-**🤖 Bot Uptime** : `{time_formatter(time.time() - START_TIME)}`
-**🤖 Bot Version** : `{versions.__assistant_version__}`
-**️️⭐ Python** : `{versions.__python_version__}`
-**💥 Pyrogram** : `{versions.__pyro_version__}` """
+**🤖 Bot Uptime🤖** : `{time_formatter(time.time() - START_TIME)}`
+__✌️ Bot Version ✌️__ : `{versions.__assistant_version__}`
+__⭐ Python⭐__ : `{versions.__python_version__}`
+**💥 Telethon** : `{versions.__pyro_version__}` """
     
     file_id, file_ref = random.choice(LOGO_DATA)
     await bot.send_animation(chat_id=chat_id,
