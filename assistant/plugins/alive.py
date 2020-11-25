@@ -53,5 +53,5 @@ __⭐ Python⭐__ : `{versions.__python_version__}`
     await bot.send_animation(chat_id=chat_id,
                              animation=file_id,
                              file_ref=file_ref,
-                             caption=caption,
-                             reply_markup=button)
+                             caption=caption)
+
