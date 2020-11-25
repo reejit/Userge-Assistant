@@ -38,10 +38,9 @@ HELP = (
     "🤖 **Askplugins Assistant**\n\n"
 
 
-    "Hey there this bot works only in [askplugins](t.me/askplugins)
-     So please proceed there to see how this bot works....."
+    "Hey there this bot works only in @Askplugins"
+    f" So please proceed there to see how this bot works....."
 )
-
 USERGE = [
     InlineQueryResultArticle(
         title="About UserGe",
