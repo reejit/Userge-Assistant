@@ -19,7 +19,7 @@ from assistant.bot import START_TIME
 from assistant.utils import time_formatter
 
 LOGO_DATA = []
-MSG_IDS = [499509, 499428, 496502, 496360, 496498]
+MSG_IDS = [12254,12255,12256,12257]
 
 
 @bot.on_message(filters.command("alive") & cus_filters.auth_chats)
@@ -33,7 +33,7 @@ async def _alive(_, message: Message):
 
 async def _refresh_data():
     LOGO_DATA.clear()
-    for msg in await bot.get_messages('UserGeOt', MSG_IDS):
+    for msg in await bot.get_messages('askplugins', MSG_IDS):
         if not msg.animation:
             continue
         gif = msg.animation
