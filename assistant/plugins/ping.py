@@ -20,4 +20,4 @@ async def _ping(_, message: Message):
     replied = await message.reply('`Pong!`')
     end = datetime.now()
     m_s = (end - start).microseconds / 1000
-    await replied.edit(f"**Pong!**\n`{m_s} ms`")
+    await replied.edit(f"**Pong!**\nTime taken:`{m_s} ms`")
