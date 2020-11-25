@@ -63,11 +63,11 @@ async def _ban_user(_, msg: Message):
         await msg.reply("`Give me rights to Ban Users.`")
         await sed_sticker(msg)
         return
-    sent = await msg.reply("`Trying to Ban User.. Hang on!! ⏳`")
+    sent = await msg.reply("`Trying to Ban User... `")
     try:
         await bot.kick_chat_member(chat_id, user_id)
         await sent.edit(
-            f"#BAN\n"
+            f"BANNED\n"
             f"USER: {mention}\n"
             f"REASON: `{reason or None}`")
     except Exception as e_f:  # pylint: disable=broad-except
@@ -128,13 +128,13 @@ async def _tban_user(_, msg: Message):
         await msg.reply("`Give me rights to Ban Users.`")
         await sed_sticker(msg)
         return
-    sent = await msg.reply("`Trying to Ban User.. Hang on!! ⏳`")
+    sent = await msg.reply("`Trying to Ban User...`")
     try:
         await bot.kick_chat_member(
             chat_id, user_id, time_)
         await asyncio.sleep(1)
         await sent.edit(
-            f"#TEMP_BAN\n"
+            f"TEMP_BANNED\n"
             f"USER: {mention}\n"
             f"TIME: `{time_val}`\n"
             f"REASON: `{reason or None}`")
@@ -170,10 +170,10 @@ async def _unban_user(_, msg: Message):
         await msg.reply("`Give me rights to UnBan Users.`")
         await sed_sticker(msg)
         return
-    sent = await msg.reply("`Trying to UnBan User.. Hang on!! ⏳`")
+    sent = await msg.reply("`Trying to UnBan User...`")
     try:
         await bot.unban_chat_member(chat_id, user_id)
-        await sent.edit("`🛡Unbanned Successfully...`")
+        await sent.edit("`🛡Unbanned Successfully🛡️`")
     except Exception as e_f:  # pylint: disable=broad-except
         await sent.edit(f"`Something went wrong! 🤔`\n\n**ERROR:** `{e_f}`")
 
@@ -220,11 +220,11 @@ async def _kick_user(_, msg: Message):
         await msg.reply("`Give me rights to Kick Users.`")
         await sed_sticker(msg)
         return
-    sent = await msg.reply("`Trying to Kick User.. Hang on!! ⏳`")
+    sent = await msg.reply("`Trying to Kick User...`")
     try:
         await bot.kick_chat_member(chat_id, user_id, int(time.time() + 60))
         await sent.edit(
-            "#KICK\n"
+            "KICKED\n"
             f"USER: {mention}\n"
             f"REASON: `{reason or None}`")
     except Exception as e_f:  # pylint: disable=broad-except
@@ -303,7 +303,7 @@ async def _demote_user(_, msg: Message):
         await msg.reply("`Give me rights to Demote User.`")
         await sed_sticker(msg)
         return
-    sent = await msg.reply("`Trying to Demote User.. Hang on!! ⏳`")
+    sent = await msg.reply("`Trying to Demote User...`")
     try:
         await bot.promote_chat_member(chat_id, user_id,
                                       can_change_info=False,
@@ -363,7 +363,7 @@ async def _mute_user(_, msg: Message):
         await bot.restrict_chat_member(chat_id, user_id, ChatPermissions())
         await asyncio.sleep(1)
         await sent.edit(
-            f"#MUTE\n"
+            f"MUTED\n"
             f"USER: {mention}\n"
             f"TIME: `Forever`\n"
             f"REASON: `{reason or None}`")
@@ -425,13 +425,13 @@ async def _tmute_user(_, msg: Message):
         await msg.reply("`Give me rights to Mute Users.`")
         await sed_sticker(msg)
         return
-    sent = await msg.reply("`Trying to Mute User.. Hang on!! ⏳`")
+    sent = await msg.reply("`Trying to Mute User...`")
     try:
         await bot.restrict_chat_member(
             chat_id, user_id, ChatPermissions(), time_)
         await asyncio.sleep(1)
         await sent.edit(
-            f"#TEMP_MUTE\n"
+            f"TEMP_MUTED\n"
             f"USER: {mention}\n"
             f"TIME: `{time_val}`\n"
             f"REASON: `{reason or None}`")
@@ -467,10 +467,10 @@ async def _unmute_user(_, msg: Message):
         await msg.reply("`Give me rights to UnMute Users.`")
         await sed_sticker(msg)
         return
-    sent = await msg.reply("`Trying to UnMute User.. Hang on!! ⏳`")
+    sent = await msg.reply("`Trying to UnMute User...`")
     try:
         await bot.unban_chat_member(chat_id, user_id)
-        await sent.edit("`🛡 Successfully Unmuted..`")
+        await sent.edit("`🛡 Successfully Unmuted🛡️`")
     except Exception as e_f:  # pylint: disable=broad-except
         await sent.edit(f"`Something went wrong!` 🤔\n\n**ERROR:** `{e_f}`")
 
@@ -483,7 +483,7 @@ async def _zombie_clean(_, msg: Message):
         del_users = 0
         del_admins = 0
         del_total = 0
-        del_stats = r"`Zero zombie accounts found in this chat... WOOHOO group is clean.. \^o^/`"
+        del_stats = r"`Zero zombie accounts found in this chat... WOW group is clean.. \^o^/`"
         if await check_bot_rights(chat_id, "can_restrict_members"):
             sent = await msg.reply("`Hang on!! cleaning zombie accounts from this chat..`")
             async for member in bot.iter_chat_members(chat_id):
