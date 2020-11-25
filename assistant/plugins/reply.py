@@ -17,7 +17,7 @@ async def _reply(_, message: Message):
     replid = message.reply_to_message
     if not replid:
         return
-    _, text = message.text.html.split(maxsplit=2)
+    _, text = message.text.html.split
     if not text:
         return
     await message.delete()
