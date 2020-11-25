@@ -43,7 +43,7 @@ async def warn(msg: Message, chat_id: int, user_id: int, reason: str = "None"):
                 ]
             ]
         )
-        reply_text = f"**#Warned**\n{mention} `has 1/{w_l} warnings.`\n"
+        reply_text = f"**Warned**\n{mention} `has 1/{w_l} warnings.`\n"
         reply_text += f"**Reason:** `{reason}`"
         await replied.reply_text(reply_text, reply_markup=keyboard)
     else:
@@ -63,7 +63,7 @@ async def warn(msg: Message, chat_id: int, user_id: int, reason: str = "None"):
                 exec_str = 'MUTED'
             reason = ('\n'.join(DATA[user_id]['reason']) + '\n' + str(args))
             await msg.reply(
-                f"**#WARNED_{exec_str}**\n"
+                f"**WARNED_{exec_str}**\n"
                 f"**{exec_str} User:** {mention}\n"
                 f"**Warn Counts:** 1{w_l}/{w_l} Warnings`\n"
                 f"**Reason:** `{reason}`")
@@ -81,7 +81,7 @@ async def warn(msg: Message, chat_id: int, user_id: int, reason: str = "None"):
                     ]
                 ]
             )
-            r_t = f"**#Warned**\n{mention} `has {nw_l}/{w_l} warnings.`\n"
+            r_t = f"**Warned**\n{mention} `has {nw_l}/{w_l} warnings.`\n"
             r_t += f"**Reason:** `{reason}`"   # r_t = reply text
             await replied.reply_text(r_t, reply_markup=keyboard)
 
@@ -207,7 +207,7 @@ async def _check_warns_of_user(_, msg: Message):
         w_c = DATA[user_id]['limit']  # warn counts
         reason = '\n'.join(DATA[user_id]['reason'])
         reply_msg = (
-            "**#WARNINGS**\n"
+            "**WARNINGS**\n"
             f"**User:** {mention}\n"
             f"**Warn Counts:** `{w_c}/{WARN_LIMIT} Warnings.`\n"
             f"**Reason:** `{reason}`")
