@@ -75,7 +75,7 @@ __Click on Join Now and Unmute yourself.__ """
             [
                 InlineKeyboardButton(
                     text="Join Now",
-                    url="https://t.me/TheUserGe"),
+                    url="https://t.me/askplugins"),
                 InlineKeyboardButton(
                     text="Unmute Me",
                     callback_data=f"joined_unmute({user.id} {msg.message_id})")
@@ -87,7 +87,7 @@ __Click on Join Now and Unmute yourself.__ """
 
 async def wc_msg(user):
     """ arguments and reply_markup for sending after verify """
-    gif = await bot.get_messages("UserGeOt", 510608)
+    gif = await bot.get_messages("UserGeOt",12292)
     file_id = gif.animation.file_id
     file_ref = gif.animation.file_ref
     text = f""" **Welcome** {user.mention},
@@ -97,7 +97,7 @@ __Check out the Button below. and feel free to ask here.__ 🤘 """
             [
                 InlineKeyboardButton(
                     text="More info.",
-                    url="https://t.me/usergeot/617305"
+                    url="https://t.me/usergeot/12285"
                 )
             ]
         ]
