@@ -19,7 +19,7 @@ from assistant.bot import START_TIME
 from assistant.utils import time_formatter
 
 LOGO_DATA = []
-MSG_IDS = [12254,12255,12256,12257]
+MSG_IDS = [12254,12255,12256,12257,12497,12498,12500]
 
 
 @bot.on_message(filters.command("alive") & cus_filters.auth_chats)
