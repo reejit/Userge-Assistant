@@ -48,19 +48,7 @@ async def _sendit(chat_id):
 **🤖 Bot Version** : `{versions.__assistant_version__}`
 **️️⭐ Python** : `{versions.__python_version__}`
 **💥 Pyrogram** : `{versions.__pyro_version__}` """
-    button = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton(
-                    text="License",
-                    url=("https://github.com/"
-                         "UsergeTeam/Userge-Assistant/blob/master/LICENSE")),
-                InlineKeyboardButton(
-                    text="Repo",
-                    url="https://github.com/UsergeTeam/Userge-Assistant")
-            ]
-        ]
-    )
+    
     file_id, file_ref = random.choice(LOGO_DATA)
     await bot.send_animation(chat_id=chat_id,
                              animation=file_id,
