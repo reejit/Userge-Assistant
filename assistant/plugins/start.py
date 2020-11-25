@@ -19,15 +19,4 @@ async def _start_(_, msg: Message):
     await msg.reply(
         HELP,
         disable_web_page_preview=True,
-        parse_mode="markdown",
-        reply_markup=InlineKeyboardMarkup([[
-            InlineKeyboardButton(
-                "🗂 Source Code",
-                url="https://github.com/UserGeTeam/UserGe-Assistant"
-            ),
-            InlineKeyboardButton(
-                "😎 Use Inline!",
-                switch_inline_query=""
-            )
-        ]])
-    )
+        parse_mode="markdown"
