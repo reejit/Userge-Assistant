@@ -25,7 +25,7 @@ async def _rules(_, message: Message):
             [
                 InlineKeyboardButton(
                     text="Read Rules",
-                    url="https://t.me/usergeot/537063"
+                    url="https://t.me/askplugins/12285"
                 )
             ]
         ]
