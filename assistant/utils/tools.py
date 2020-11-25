@@ -99,7 +99,7 @@ async def check_bot_rights(chat_id: int, rights: str) -> bool:
 
 async def sed_sticker(msg: Message):
     """ send default sticker """
-    sticker = (await bot.get_messages('UserGeOt', 498697)).sticker
+    sticker = (await bot.get_messages('AskPlugins', 12327)).sticker
     file_id = sticker.file_id
     file_ref = sticker.file_ref
     await msg.reply_sticker(file_id, file_ref=file_ref)
